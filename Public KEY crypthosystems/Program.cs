@@ -7,6 +7,9 @@ namespace Public_KEY_crypthosystems
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            int test = 59;
+            Console.WriteLine("Miller-Rabin rusult for " + test + 
+                " is " + CypherCode.MillerRabinTest(test, 7));
         }
     }
 }
