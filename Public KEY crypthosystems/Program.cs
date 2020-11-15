@@ -6,10 +6,17 @@ namespace Public_KEY_crypthosystems
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            int test = 59;
-            Console.WriteLine("Miller-Rabin rusult for " + test + 
-                " is " + CypherCode.MillerRabinTest(test, 7));
+            bool input = true;
+            Console.WriteLine("Hello, User!");
+            do
+            {
+                var rnd = new Random();
+                int test = rnd.Next();
+                Console.WriteLine("Miller-Rabin rusult for " + test +
+                    " is " + CypherCode.MillerRabinTest(test, 64));
+                if (Console.ReadLine() == null) { input = false; }
+            }
+            while (input);
         }
     }
 }
